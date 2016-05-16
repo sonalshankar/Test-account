@@ -1,0 +1,17 @@
+<div>
+	<div class="modal-header">
+		<h3 class="modal-title">Select a template</h3>
+	</div>
+	<div class="modal-body">
+		 <form name="taskForm">
+	        <div ng-repeat="template in templates">
+	            <input type="radio" ng-model="selected.template" 
+	            			value="{{template}}" class="templateDialogTemplateTitle">{{template.title}}
+	        </div>
+	    </form>
+	</div>
+	<div class="modal-footer">
+		<button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+		<button class="btn btn-primary" type="button" ng-click="ok()">Submit</button>
+	</div>	
+</div>

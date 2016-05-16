@@ -1,0 +1,228 @@
+<div class="container-fluid">
+    <div class="form-horizontal">
+        <fieldset>
+            <legend class="legendPageTitle">{{ 'CREATE_QUOTE_REQUEST' | translate }}
+                <div class="btn-group SimpleEventHeaderActionBtnGrp" role="group">
+
+                    <button type="button"
+                            class="w-btn w-btn-primary SimpleEventPublishBtn" ng-click="createSimpleRFX()">{{'PUBLISH'
+                        |translate }}
+                    </button>
+                    <button type="button" class="w-btn SimpleEventSaveBtn">{{
+                        'SAVE_AS_DRAFT' | translate }}
+                    </button>
+                    <button type="button" class="w-btn">{{ 'CANCEL' | translate}}</button>
+                </div>
+            </legend>
+
+            <div class="form-group header">
+                <label for="SimpleEventTitle" class="col-lg-2 control-label">{{ 'TITLE'|
+                    translate}}</label>
+
+                <div class="col-lg-2">
+                    <input type="text" class="form-control" id="SimpleEventTitle"
+                           ng-model="eventData.eventTitle">
+                </div>
+                <div class="col-lg-1"></div>
+                <label class="col-lg-1 control-label">{{ 'TEST_PROJECT'
+                    |translate}}</label>
+
+                <div class="col-lg-2">
+                    <label class="radio-inline" for="SimpleEventTestProject-1">
+                        <input type="radio" name="SimpleEventTestProject"
+                               id="SimpleEventTestProject-1" value="1"
+                               ng-model="eventData.isTestProject">{{ 'YES' | translate}}
+                    </label>
+                    <label class="radio-inline" for="SimpleEventTestProject-0">
+                        <input type="radio" name="SimpleEventTestProject"
+                               id="SimpleEventTestProject-0" value="0"
+                               checked="checked" ng-model="eventData.isTestProject">{{'NO'
+                        | translate}}
+                    </label>
+                </div>
+                <label for="SimpleEventType" class="col-lg-1 control-label">{{'EVENT_TYPE'
+                    | translate}}</label>
+
+                <div class="col-lg-2">
+                    <select class="form-control dmsselect" id="SimpleEventType"
+                            ng-model="eventData.eventType" ng-change="getTemplates()">
+                        <option ng-repeat="eventType in eventTypes"
+                                value="{{eventType.id}}">{{eventType.name}}
+                        </option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="SimpleEventTemplateName" class="col-lg-2 control-label">
+                    {{ 'TEMPLATE' | translate}}</label>
+
+                <div class="col-lg-2">
+                    <select class="form-control dmsselect" id="SimpleEventTemplateName"
+                            ng-model="eventData.templateID" ng-change="getEventContent()">
+                    <option ng-repeat="template in templates"
+                            value="{{template.id}}">{{template.title}}
+                    </option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">{{ 'DUE_TIME' | translate}}</label>
+
+                <div class="col-sm-1">
+                    <label class="radio-inline"> <input
+                            type="radio" name="radios" id="radios-0" value="1"
+                            checked="checked">{{ 'IN' | translate}}
+                    </label>
+                </div>
+                <div class="col-sm-1">
+                    <input type="text" class="form-control" id="SimpleEventDueIn"
+                           ng-model="eventData.eventDueInDuration">
+                </div>
+                <div class="col-sm-1">
+                    <select class="form-control dmsselect" id="SimpleEventDurationChoices"
+                            ng-model="eventData.eventDueInDurationDimension">
+                        <option ng-repeat="timedimension in timedimensions"
+                                value="{{timedimension.id}}">{{timedimension.name}}
+                        </option>
+                    </select>
+                </div>
+                <div class="col-sm-2"></div>
+                <label class="col-sm-2 control-label">{{ 'COLLECT_QUOTE_FOR'
+                    |translate}}</label>
+                <div class="col-sm-1">
+                    <input type="text" class="form-control" id="SimpleEventTitle"
+                           ng-model="eventData.validityPeriodCount">
+                </div>
+                <div class="col-sm-1">
+                    <select class="form-control dmsselect" id="SimpleEventValidityPeriodTypes"
+                            ng-model="eventData.validityPeriodTypes">
+                        <option ng-repeat="validityPeriodType in validityPeriodTypes"
+                                value="{{validityPeriodType.id}}">
+                            {{validityPeriodType.name}}
+                        </option>
+                    </select>
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-1">
+                    <label class="radio-inline" for="SimpleEventDuration-1"> <input
+                            type="radio" name="radios" id="SimpleEventDuration-1"
+                            value="1"
+                            checked="checked">{{ 'BY' | translate}}
+                    </label>
+                </div>
+                <div class="col-sm-2">
+                    <div class="input-group">
+                        <input type="text" class="form-control" data-uib-datepicker-popup
+                               data-ng-model="eventData.eventDueDate"
+                               data-is-open="popup1.opened"
+                               data-datepicker-options="dateOptions"
+                               data-ng-required="true"
+                               data-close-text="Close"/>
+							<span class="input-group-btn">
+								<button type="button" class="btn btn-default form-control"
+                                        data-ng-click="open1()"
+                                        id="SimpleEventCalendarBtn">
+                                    <i class="glyphicon glyphicon-calendar"></i>
+                                </button>
+						</span>
+                    </div>
+                </div>
+                <div class="col-sm-3"></div>
+                <div class="col-sm-1">
+                    <label class="control-label">{{ 'STARTING_ON'
+                        |translate}}</label>
+                </div>
+                <div class="col-sm-2">
+                    <div class="input-group">
+                        <input type="text" class="form-control" data-uib-datepicker-popup
+                               data-ng-model="eventData.validityPeriodStartDate"
+                               data-is-open="popup2.opened"
+                               data-datepicker-options="dateOptions"
+                               data-ng-required="true"
+                               data-close-text="Close"/>
+							<span class="input-group-btn">
+								<button type="button" class="btn btn-default form-control"
+                                        data-ng-click="open2()"
+                                        id="SimpleEventCalendarBtn">
+                                    <i class="glyphicon glyphicon-calendar"></i>
+                                </button>
+						</span>
+                    </div>
+                </div>
+
+            </div>
+
+    </div>
+
+    <div class="form-group">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-2 checkbox">
+            <label>
+                <input type="checkbox"
+                       id="SimpleEventReminderChkBox"
+                       ng-model="eventData.remindSupplier" ng-true-value="1">
+                {{ 'REMIND_SUPPLIER' | translate}}
+            </label>
+        </div>
+    </div>
+
+    <div class="form-group">
+
+        <label class="col-sm-1 control-label"></label>
+
+    </div>
+
+    <div class="form-group" ng-show="isTemplateSelected()">
+        <label class="col-sm-6 control-label"></label>
+    </div>
+
+    <legend class="legend" ng-show="isTemplateSelected()">{{ 'MATERIAL_ITEMS'
+        |translate}}
+    </legend>
+    <div class="form-group">
+        <div id="grid1" ui-grid="itemGridOptions" ui-grid-selection
+             ui-grid-resize-columns class="contentgrid"
+             ng-if="isTemplateSelected()"
+             ng-style="{height: (itemGridOptions.data.length*30)+32+'px'}"></div>
+        <div class="btn-group SimpleEventItemGridBtnGrp" role="group"
+             ng-show="isTemplateSelected()">
+            <button type="button" class="w-btn SimpleEventDeleteBtn"
+                    ng-click="deleteItems()">Delete
+            </button>
+        </div>
+    </div>
+    <legend class="legend" ng-show="isTemplateSelected()">{{ 'SUPPLIERS'
+        |translate}}
+    </legend>
+    <div class="form-group">
+        <div id="grid2" ui-grid="supplierGridOptions" ui-grid-selection
+             class="suppliergrid" ng-if="isTemplateSelected()"
+             ng-style="{height: (supplierGridOptions.data.length*30)+32+'px'}"></div>
+        <div class="btn-group SimpleEventSupplierGridBtnGrp" role="group"
+             ng-show="isTemplateSelected()">
+            <button type="button" class="w-btn SimpleEventDeleteBtn"
+                    ng-click="deleteSuppliers()">{{ 'DELETE' |translate}}
+            </button>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="btn-group SimpleEventFooterActionBtnGrp" role="group">
+            <button type="button"
+                    class="w-btn w-btn-primary SimpleEventPublishBtn" ng-click="createSimpleRFX()">{{'PUBLISH'
+                |translate }}
+            </button>
+            <button type="button" class="w-btn SimpleEventSaveBtn">{{
+                'SAVE_AS_DRAFT' | translate }}
+            </button>
+            <button type="button" class="w-btn">{{ 'CANCEL' | translate}}</button>
+        </div>
+    </div>
+
+</div>
+</div>

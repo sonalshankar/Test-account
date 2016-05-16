@@ -1,0 +1,12 @@
+{
+	"validityPeriodTypes": [{
+		"id": "0",
+		"name": "Months"
+	}, {
+		"id": "1",
+		"name": "Quarters"
+	}, {
+		"id": "2",
+		"name": "Years"
+	}]
+}

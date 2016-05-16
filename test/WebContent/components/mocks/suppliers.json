@@ -1,0 +1,48 @@
+{
+"columns": 
+	[
+		{
+		"field":"name",
+		"label": "Name."
+		}, 
+		{
+		"field":"contact",
+		"label": "Contact"
+		}, 
+		{
+		"field":"incumbent",
+		"label": "Incumbent"
+		},
+		{
+		"field":"manufacturerid",		
+		"label": "Manufacturer ID"
+		}
+	],
+	"suppliers": [{
+		"name": "Xin Fu Software Company Int.",
+		"contact":"Cindy Coleman",
+		"incumbent":false,
+		"manufacturerid":"32323"
+	}, {
+		"name": "GURAFU K.K.",
+		"contact":"Jocelyn Henderson",
+		"incumbent":false,
+		"manufacturerid":"5656"
+	}, {
+		"name": "Maximo Marketing Associates Inc.",
+		"contact":"José Dale Ruiz",
+		"incumbent":false,
+		"manufacturerid":"121323"
+	}, {
+		"name": "Shang Fa Paper Products Manufactory",
+		"contact":"Jocelyn Henderson",
+		"incumbent":false,
+		"manufacturerid":"5656"
+	}, {
+		"name": "Industrias Mateo, S.L.",
+		"contact":"Stephanie Cash",
+		"incumbent":false,
+		"manufacturerid":"5656"
+	}	
+	]
+}

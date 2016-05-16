@@ -1,0 +1,12 @@
+{
+	"eventTypes": [{
+		"id": "RFI",
+		"name": "RFI"
+	}, {
+		"id": "RFP",
+		"name": "RFP"		
+	}, {
+		"id": "Auction",
+		"name": "Auction"		
+	}]
+}

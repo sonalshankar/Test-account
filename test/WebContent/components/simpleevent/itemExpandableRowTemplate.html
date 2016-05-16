@@ -1,0 +1,40 @@
+<fieldset  data-ng-repeat="validityPeriod in validityPeriods">
+	<div class="col-lg-1">
+		<label class="col-lg-2 control-label">From</label>
+	</div>
+	<div class="col-lg-2">
+		<div class="input-group">
+			<input type="text" class="form-control" data-uib-datepicker-popup
+			data-ng-model="dt" data-is-open="popup2.opened"
+			data-datepicker-options="dateOptions" data-ng-required="true"
+			data-close-text="Close" /> 
+			<span class="input-group-btn">
+				<button type="button" class="btn btn-default form-control"
+					data-ng-click="open2()" id="SimpleEventCalendarBtn">
+					<i class="glyphicon glyphicon-calendar"></i>
+				</button>
+			</span>
+		</div>
+	</div>
+	<div class="col-lg-1">
+		<label class="col-lg-2 control-label">to</label>
+	</div>
+	<div class="col-lg-2">
+		<div class="input-group">
+			<input type="text" class="form-control" data-uib-datepicker-popup
+				data-ng-model="dt" data-is-open="popup2.opened"
+				data-datepicker-options="dateOptions" data-ng-required="true"
+				data-close-text="Close" /> 
+				<span class="input-group-btn">
+					<button type="button" class="btn btn-default form-control"
+						data-ng-click="open2()" id="SimpleEventCalendarBtn">
+						<i class="glyphicon glyphicon-calendar"></i>
+					</button>
+			</span>
+		</div>
+	</div>
+	<div class="col-lg-2">
+		<button ng-click="addNewValidityPeriod()">Add</button>
+	</div>
+	</div>
+</fieldset>

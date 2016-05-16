@@ -1,0 +1,12 @@
+{
+	"timedimensions": [{
+		"id": "minutes",
+		"name": "minutes"
+	}, {
+		"id": "hours",
+		"name": "hours"
+	}, {
+		"id": "days",
+		"name": "days"
+	}]
+}

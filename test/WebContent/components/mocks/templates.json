@@ -1,0 +1,49 @@
+{  
+   "templates":[  
+      {  
+         "description":"Use this auction type to create a competitive bidding event for line items and/or lots, based only on price. Buyers determine whether they want suppliers to see only their own rank, their own rank and the lead bid, or all supplier responses.",
+         "id":"SYS0201",
+         "title":"Reverse Auction"
+      },
+      {  
+         "description":"Use this auction type to create a competitive bidding event for line items and/or lots, including factors other than price. Buyers determine whether they want suppliers to see only their own rank, their own rank and the lead bid, or all supplier responses.",
+         "id":"SYS0200",
+         "title":"Reverse Auction with Bid Transformation"
+      },
+      {  
+         "description":"Use this auction type to create a competitive bidding event for line items and/or lots, including factors other than price. Buyers determine whether the values for these factors are to be provided by the suppliers during the event, whether they want suppliers to see only their own rank, their own rank and the lead bid, or all supplier responses.",
+         "id":"SYS0212",
+         "title":"Total Cost Auction"
+      },
+      {  
+         "description":"Use this auction type to create a dutch style competitive bidding event for line items and/or basket lots.",
+         "id":"SYS0213",
+         "title":"Dutch Reverse Auction"
+      },
+      {  
+         "description":"Use this auction type to create a dutch style competitive bidding event for line items and/or basket lots, including factors other than price.",
+         "id":"SYS0216",
+         "title":"Dutch Reverse Auction with Bid Transformation"
+      },
+      {  
+         "description":"Use this auction type to create a competitive bidding event based on an index. Suppliers will bid and compete on an amount from a given index. Buyers determine whether they want suppliers to see only their own rank, their rank and the lead bid, or all supplier responses.",
+         "id":"SYS0202",
+         "title":"Index Based Auction by Amount"
+      },
+      {  
+         "description":"Use this auction type to create a competitive bidding event based on an index. Suppliers will bid and compete on a percentage from a given index. Buyers determine whether they want suppliers to see only their own rank, their own rank and the lead bid, or all supplier responses.",
+         "id":"SYS0203",
+         "title":"Index Based Auction by Percentage"
+      },
+      {  
+         "description":"Template to run auction with a few extra features that Prod Ops turn on from time to time.\n\tCurrently, the only extra feature available in this template is the ability to specify the event type as Serial, Parallel or Staggered.\n   ",
+         "id":"WS11592",
+         "title":"Extended Reverse Auction"
+      },
+      {  
+         "description":"Template for running very advanced Reverse Auctions\n   ",
+         "id":"WS11720",
+         "title":"Advanced Reverse Auction"
+      }
+   ]
+}

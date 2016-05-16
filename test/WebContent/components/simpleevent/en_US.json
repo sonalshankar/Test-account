@@ -1,0 +1,21 @@
+{
+  "CREATE_QUOTE_REQUEST":"Create Quote Request",
+  "PUBLISH":"Publish",
+  "SAVE_AS_DRAFT":"Save as Draft",
+  "CANCEL":"Cancel",
+  "TITLE":"Title",
+  "TEMPLATE":"Template",
+  "TEST_PROJECT":"Test Project.",
+  "YES":"Yes",
+  "NO":"No",
+  "DUE_TIME":"Due Time",
+  "IN":"in",
+  "EVENT_TYPE":"Event Type",
+  "BY":"by",
+  "REMIND_SUPPLIER":"Remind Supplier",
+  "COLLECT_QUOTE_FOR":"Collect Quote For",
+  "MATERIAL_ITEMS":"Material Items",
+  "DELETE":"Delete",
+  "SUPPLIERS":"Suppliers",
+  "STARTING_ON":"Starting On"
+}

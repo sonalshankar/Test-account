@@ -1,0 +1,108 @@
+html, body, button, input, select, textarea {
+    font: 300 13px/16px Arial, Verdana, sans-serif!important;
+}
+
+.legendPageTitle {
+   padding-top: 35px;
+   padding-bottom: 35px;
+}
+
+.suppliergrid{
+    width: 100%;
+    height:100%;
+    margin-bottom: 5px;
+  }
+
+  .contentgrid{
+    width: 100%;
+    height:100%;
+    margin-bottom: 5px;
+  }
+  
+ .legend { 
+ 	border:0px;
+ 	padding-top:20px;
+ }
+ 
+ .legend-title {
+ 	padding-top:20px;
+ 	padding-bottom:25px;
+ }
+ 
+ .SimpleEventReminderChkBox{
+ 	height:34px;
+ }
+ 
+ .table-footer{
+ 	padding-bottom:15px;
+ 	background-color:grey;
+ }
+ 
+ .SimpleEventDeleteBtn{
+ 	margin-left:10px!important;
+ }
+ 
+ .SimpleEventSaveBtn{
+ 	margin-left:10px!important;
+ }
+ 
+ .SimpleEventPublishBtn{
+  	margin-left:10px!important;
+ }
+ 
+ .SimpleEventHeaderActionBtnGrp{
+ 	float:right;
+ }
+ 
+ .SimpleEventFooterActionBtnGrp{
+ 	margin-top:50px;
+ 	float:right;
+ }
+ 
+.SimpleEventItemGridBtnGrp{
+ 	float:right;
+ }
+
+ .SimpleEventSupplierGridBtnGrp{
+ 	float:right;
+ }
+
+ .SimpleEventExcelImportBtn{
+ 	margin-left:10px!important;
+ }
+
+ .header{
+ 	margin-top:40px;
+ }
+
+ .templateName{
+ 	text-align:left!important;
+ }
+
+  .control-label{
+  	color: #797979;
+    text-align: right;
+    padding-top: 8px;
+    font-weight:300!important;
+  }
+
+ .templateDialogTemplateTitle{
+ 	margin-right:5px!important;
+ }
+
+ .icon-success {
+     color: #5CB85C;
+     font-size:20px;
+ }
+
+ .modal-header{
+    text-align:left;
+ }
+
+ .modal-body{
+    text-align:left;
+ }
+
+ .dmsselect{
+    background:none!important;
+ }
