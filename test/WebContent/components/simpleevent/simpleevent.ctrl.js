@@ -76,7 +76,7 @@ angular.module('DMSApp')
 			 
 			 $scope.eventData = {
 			};
-		
+			 $scope.eventData.isTestProject = "0"; // set default value
 			//keep any service calls for populating data when page first loads here.
 			 $scope.initData = function(){
 				 simpleEventFactory.getTimeDimensions().then(function(data){
