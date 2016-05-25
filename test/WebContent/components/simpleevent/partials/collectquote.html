@@ -1,0 +1,41 @@
+<div class="control-group" ng-class="{true: 'error'}[submitted && userForm.input.$invalid && userForm.period.$invalid]">	
+	<span class="col-md-2 text-right">
+  		<label class="control-label">{{ 'COLLECT_QUOTE_FOR' |translate}}</label>	
+  		<span ng-hide="submitted && userForm.input.$error.required">*</span>
+		<span ng-show="submitted && userForm.input.$error.required" class="red-text">*</span>	
+	</span>
+  	<div class="col-md-2">
+  		<div class="row-inline">
+            <input validation type="number" name="input" 
+            		class="form-control row-inline quote number-input" 
+            		id="SimpleEventTitle" 
+            		ng-model="eventData.validityPeriodCount" 
+            		min="1" max="99" required>
+            <select validation class="form-control dmsselect row-inline period-type" id="SimpleEventValidityPeriodTypes"
+                    ng-model="eventData.validityPeriodTypes" name="period" required>
+            	<option ng-repeat="validityPeriodType in validityPeriodTypes" value="{{validityPeriodType.id}}">
+                	{{validityPeriodType.name | translate}}
+                </option>
+            </select>
+            <p class="red-text top-sm" ng-show="submitted && userForm.input.$error.required && userForm.period.$error.required">{{ 'REQUIRED' | translate}}</p>
+  		</div>
+  		<div class="top-sm">
+  			<label class="control-label">{{ 'STARTING_ON'|translate}}</label>
+  			<div class="input-group starting-on-date float-right">
+                <input type="text" class="form-control" data-uib-datepicker-popup
+                       data-ng-model="eventData.validityPeriodStartDate"
+                       data-is-open="popup2.opened"
+                       data-datepicker-options="dateOptions"
+                       data-ng-required="true"
+                       data-close-text="Close"/>
+				<span class="input-group-btn">
+					<button type="button" class="btn btn-default form-control"
+                            data-ng-click="open2()"
+                            id="SimpleEventCalendarBtn">
+                        <i class="glyphicon glyphicon-calendar"></i>
+                    </button>
+				</span>
+            </div>
+  		</div>
+  	</div>
+</div>

@@ -1,1 +1,37 @@
-<H1>Pricing Conditions {{name}}</H1>
+<div class="col-md-12">
+	<div class="form-horizontal">
+        <fieldset>
+            <legend class="legendPageTitle">{{ 'SUPPLIER_RESPONSE' | translate }}
+            	<button type="button" class="w-btn">{{ 'CANCEL' | translate}}</button>
+            	<button type="button" class="w-btn w-btn-primary SimpleEventPublishBtn" ng-click="createSimpleRFX()">
+    				{{'SUBMIT' | translate }}
+    			</button>   
+            </legend>
+		</fieldset>
+	</div>
+	<!-- <form class="form-horizontal alert alert-info">
+		<div class="control-group">
+    		<label class="control-label" for="inputPassword">Name</label>
+    		<div class="controls">
+				<a xeditable href="javascript:;" id="person_name" data-type="text" data-pk="1" data-name="person_name" data-ng-model="person_name" data-placement="right" data-placeholder="Required" data-showbuttons="true" data-original-title="Enter your name" class="editable editable-click">{{person_name}}</a>
+    		</div>
+  		</div>
+  	</form> -->
+	<div>
+		<div> 
+			<span>{{ 'MATERIAL_ITEMS' | translate }}</span>
+			 <a href="#" editable-text="user.name">{{ user.name || "empty" }}</a>
+		</div>
+		<div id='itemsGrid' ui-grid="itemsGridOptions" 
+			 ui-grid-edit ui-grid-row-edit ui-grid-cellNav ui-grid-pinning
+         	 class="grid">
+         </div>
+         <div>
+         	<button type="button" class="w-btn">{{ 'SUBMIT_ENTIRE_RESPONSE' | translate}}</button>
+         	<button type="button" class="w-btn">{{ 'UPDATE_TOTALS' | translate}}</button>
+         	<button type="button" class="w-btn">{{ 'SAVE' | translate}}</button> |
+         	<button type="button" class="w-btn">{{ 'COMPOSE_MESSAGE' | translate}}</button>
+         	<button type="button" class="w-btn">{{ 'EXCEL_IMPORT' | translate}}</button>
+         </div>
+	</div>
+</div>

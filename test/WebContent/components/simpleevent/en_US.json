@@ -5,7 +5,7 @@
   "CANCEL":"Cancel",
   "TITLE":"Title",
   "TEMPLATE":"Template",
-  "TEST_PROJECT":"Test Project.",
+  "TEST_PROJECT":"Test Project",
   "YES":"Yes",
   "NO":"No",
   "DUE_TIME":"Due Time",
@@ -17,5 +17,14 @@
   "MATERIAL_ITEMS":"Material Items",
   "DELETE":"Delete",
   "SUPPLIERS":"Suppliers",
-  "STARTING_ON":"Starting On"
+  "STARTING_ON":"Starting On",
+  "MINUTES":"minutes",
+  "HOURS":"hours",
+  "DAYS":"days",
+  "MONTHS":"Months",
+  "QUARTERS":"Quarters",
+  "YEARS":"Years",
+  "END_TIME_SPECIFIED": ": End time explicitly specified",
+  "REQUIRED":"Required",
+  "CREATE_EVENT":"Create event"
 }

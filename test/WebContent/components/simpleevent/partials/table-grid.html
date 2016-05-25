@@ -1,0 +1,37 @@
+<div class="form-group">
+
+        <label class="col-sm-1 control-label"></label>
+
+    </div>
+    <div class="form-group" ng-show="isTemplateSelected()">
+        <label class="col-sm-6 control-label"></label>
+    </div>
+     <legend class="legend" ng-show="isTemplateSelected()">{{ 'MATERIAL_ITEMS'
+        |translate}}
+    </legend>
+    <div class="form-group">
+        <div id="grid1" ui-grid="itemGridOptions" ui-grid-selection
+             ui-grid-resize-columns class="contentgrid"
+             ng-if="isTemplateSelected()"
+             ng-style="{height: (itemGridOptions.data.length*30)+32+'px'}"></div>
+        <div class="btn-group SimpleEventItemGridBtnGrp" role="group"
+             ng-show="isTemplateSelected()">
+            <button type="button" class="w-btn SimpleEventDeleteBtn"
+                    ng-click="deleteItems()">Delete
+            </button>
+        </div>
+    </div>
+    <legend class="legend" ng-show="isTemplateSelected()">{{ 'SUPPLIERS'
+        |translate}}
+    </legend>
+    <div class="form-group">
+        <div id="grid2" ui-grid="supplierGridOptions" ui-grid-selection
+             class="suppliergrid" ng-if="isTemplateSelected()"
+             ng-style="{height: (supplierGridOptions.data.length*30)+32+'px'}"></div>
+        <div class="btn-group SimpleEventSupplierGridBtnGrp" role="group"
+             ng-show="isTemplateSelected()">
+            <button type="button" class="w-btn SimpleEventDeleteBtn"
+                    ng-click="deleteSuppliers()">{{ 'DELETE' |translate}}
+            </button>
+        </div>
+    </div> 

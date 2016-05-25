@@ -3,29 +3,48 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>Insert title here</title>
-	 <link rel="STYLESHEET" type="text/css" href="libs/bootstrap/dist/css/bootstrap.min.css"/>
- 	 <link rel="STYLESHEET" href="libs/ui-grid/ui-grid.css"/>
- 	 <link rel="STYLESHEET" type="text/css" href="css/dms.css"/>
-	 
+	<link rel="STYLESHEET" type="text/css" href="libs/bootstrap/dist/css/bootstrap.min.css"/>
+	<link rel="STYLESHEET" href="libs/ui-grid/ui-grid.css"/>
+	<link href="../../bower_components/angular-xeditable/dist/css/xeditable.css" rel="stylesheet">
+	<link rel="STYLESHEET" type="text/css" href="css/dms.css"/>
+	<link href="../../bower_components/bootstrap-editable/src/css/bootstrap-editable.css" rel="stylesheet"/>
+	
+	<!-- <script src="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/js/bootstrap-editable.min.js"></script> -->
+	<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script> 
 	<script src="libs/angular/angular.min.js"></script>
 	<script src="libs/angular/angular-ui-router.min.js"></script>
 	<script src="libs/angular-translate/angular-translate.js"></script>
 	<script src="libs/angular-translate-loader-partial/angular-translate-loader-partial.min.js"></script>	
 	<script src="libs/ui-grid/ui-grid.min.js"></script>
 	<script src="libs/angular-bootstrap/ui-bootstrap-tpls-1.3.2.min.js"></script>
+	<script src="../../bower_components/angular-xeditable/dist/js/xeditable.js"></script>
+	<script src="../../bower_components/bootstrap-editable/src/js/bootstrap-editable.js"></script>
+	
 	<script src="components/app.module.js"></script>
+	
 	<script src="components/simpleevent/simpleevent.ctrl.js"></script>
 	<script src="components/simpleevent/simpleevent.service.js"></script>
-	<script src="components/priceconditions/priceconditions.ctrl.js"></script>
-	<script src="components/simpleevent/partials/simpleeventtemplates.ctrl.js"></script>
-	<script src="components/simpleevent/partials/suppliersearch.ctrl.js"></script>		
+	
+	<script src="components/priceconditions/priceconditions.ctrl.js"></script>		
 	<script src="components/priceconditions/priceconditions.service.js"></script>
+	
+	<script src="components/simpleevent/partials/simpleeventtemplates.ctrl.js"></script>
+	<script src="components/simpleevent/partials/suppliersearch.ctrl.js"></script>
+	
+	<script src="components/common/directive/validation.js"></script>
+	<script src="components/common/directive/xeditable.js"></script>
+	<script src="components/common/filters/currencyFilter.js"></script>
+	<script src="components/common/filters/moneyDifferenceFilter.js"></script>
+	<script src="components/common/filters/shortLocaleStringFilter.js"></script>
+	<script src="components/common/filters/UOMFilter.js"></script>
 	
 </head>
 
 <body>
 	  <div data-ng-app="DMSApp">
-      	 <div data-ui-view="simpleevent"></div>
+	  	<!-- <div data-ui-view="simpleevent"> -->
+      	 <div data-ui-view="priceconditions">
+      	 </div>
  	 </div>
 
 </body>

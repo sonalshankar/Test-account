@@ -1,0 +1,59 @@
+<div class="control-group" ng-class="{true: 'error'}[submitted && userForm.input.$invalid $$ userForm.dureation.$invalid]">
+	<span class="col-md-2 text-right">
+		<label class="control-label">{{ 'DUE_TIME' | translate}}</label>
+		<span ng-hide="submitted && userForm.radios.$error.required">*</span>
+		<span ng-show="submitted && userForm.radios.$error.required" class="red-text astrick">*</span>	
+	</span>
+	<span class="col-md-2">
+		<div class="row-inline">
+			<span class="radio-inline">
+				<label class="gray-text">
+					<input type="radio" name="radios" id="radios-0" value="0" ng-model="content">
+                   	{{ 'IN' | translate}}
+				</label> 
+            </span>
+            <span class="in-text gray-text" ng-hide="content == '0'">{{ 'END_TIME_SPECIFIED' | translate}}</span>
+            <span ng-show="content == '0'">
+                <input validation type="number" name="input" 
+                		class="form-control row-inline days-digi" 
+                		id="SimpleEventDueIn" 
+                	   	ng-model="eventData.eventDueInDuration" 
+                	   	min="1" max="99" required>
+           		<select validation class="form-control dmsselect days-sel row-inline" id="SimpleEventDurationChoices"
+                    ng-model="eventData.eventDueInDurationDimension" name="dureation" required>
+            		<option ng-repeat="timedimension in timedimensions"
+                	value="{{timedimension.id}}">{{timedimension.name | translate}}
+                	</option>
+            	</select>
+            	<p class="red-text top-sm" ng-show="submitted && userForm.input.$error.required && userForm.dureation.$error.required">{{ 'REQUIRED' | translate}}</p> 
+            </span>
+		</div>
+        <div class="radio-inline top-sm">
+        	<label for="SimpleEventDuration-1" class="gray-text"> 
+            	<input type="radio" name="radios" id="SimpleEventDuration-1" value="1" checked="checked" ng-model="content">
+                {{ 'BY' | translate}}
+            </label>
+            <div class="input-group float-right dates">
+            	<input validation type="text" class="form-control" data-uib-datepicker-popup
+                       data-ng-model="eventData.eventDueDate"
+                       data-is-open="popup1.opened"
+                       data-datepicker-options="dateOptions"
+                       data-ng-required="true"
+                       data-close-text="Close"/>
+				<span class="input-group-btn">
+					<button type="button" class="btn btn-default form-control"
+                        	data-ng-click="open1()"
+                        	id="SimpleEventCalendarBtn">
+                		<i class="glyphicon glyphicon-calendar"></i>
+                	</button>
+				</span>
+			</div>
+		</div>
+		<div class="checkbox top-sm">
+			<label>
+				<input type="checkbox" id="SimpleEventReminderChkBox" ng-model="eventData.remindSupplier" ng-true-value="1">
+                {{ 'REMIND_SUPPLIER' | translate}}
+            </label>
+		</div>
+	</span>
+</div>

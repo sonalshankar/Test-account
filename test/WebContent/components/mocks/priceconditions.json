@@ -1,0 +1,191 @@
+{
+	"items": [{
+		"terms": [{
+			"type": "java.lank.String",
+			"value": "PE XBOX one on box",
+			"fieldId": "name"
+		}, {
+			"type": "java.lank.String",
+			"value": "21441028",
+			"fieldId": "supplierPartId"
+		}, {
+			"type": "ariba.sourcing.basic.UCMoney",
+			"value": {
+				"amount": 4,
+				"currency": "USD"
+			},
+			"fieldId": "PRICE",
+			"pricingConditionSettings": {
+				"allowValidityPeriods": 1,
+				"conditionTypeCode": "PB00",
+				"validityPeriodType": 1,
+				"validityPeriodDuration": 3,
+				"startDate": "jan-2016"
+			},
+			"supplierPricingConditions": [{
+				"startDate": "Jan_2016",
+				"endDate": "March_2016",
+				"value": 0.0,
+				"fieldId": "01_2016"
+			}, {
+				"startDate": "Jan_2016",
+				"endDate": "March_2016",
+				"type": "java.math.BigDecimal",
+				"value": 2.0,
+				"fieldId": "04_2016"
+			}, {
+				"startDate": "Jan_2016",
+				"endDate": "March_2016",
+				"type": "java.math.BigDecimal",
+				"value": 3.0,
+				"fieldId": "07_2016"
+			}]
+		}, {
+			"type": "ariba.sourcing.basic.UOMQuantity",
+			"value": {
+				"unitOfMeasure": "each",
+				"amount": 100
+			},
+			"fieldId": "QUANTITY"
+		}, {
+			"type": "ariba.sourcing.basic.UCMoney",
+			"value": {
+				"amount": 400,
+				"currency": "USD"
+			},
+			"fieldId": "EXTENDEDPRICE"
+		}, {
+			"type": "java.lang.Integer",
+			"value": 10,
+			"fieldId": "LeadTime"
+		}]
+	}, {
+		"terms": [{
+			"type": "java.lank.String",
+			"value": "Pallet US only",
+			"fieldId": "name"
+		}, {
+			"type": "java.lank.String",
+			"value": "22293230",
+			"fieldId": "supplierPartId"
+		}, 
+		{
+			"type": "ariba.sourcing.basic.UCMoney",
+			"value": {
+				"amount": 4,
+				"currency": "USD"
+		},
+			"fieldId": "PRICE",
+			"pricingConditionSettings": {
+				"allowValidityPeriods": 1,
+				"conditionTypeCode": "PB00",
+				"validityPeriodType": 1,
+				"validityPeriodDuration": 3,
+				"startDate": "01_2016"
+			},
+			"supplierPricingConditions": [{
+				"startDate": "Jan_2016",
+				"endDate": "March_2016",
+				"value": 4,
+				"fieldId": "01_2016"
+			}, {
+				"startDate": "Jan_2016",
+				"endDate": "March_2016",
+				"type": "java.math.BigDecimal",
+				"value": 5,
+				"fieldId": "04_2016"
+			}, {
+				"startDate": "Jan_2016",
+				"endDate": "March_2016",
+				"type": "java.math.BigDecimal",
+				"value": 6,
+				"fieldId": "07_2016"
+			}]
+		}, {
+			"type": "ariba.sourcing.basic.UOMQuantity",
+			"value": {
+				"unitOfMeasure": "each",
+				"amount": 100
+			},
+			"fieldId": "QUANTITY"
+		}, {
+			"type": "ariba.sourcing.basic.UCMoney",
+			"value": {
+				"amount": 400,
+				"currency": "USD"
+			},
+			"fieldId": "EXTENDEDPRICE"
+		}, {
+			"type": "java.lang.Integer",
+			"value": 10,
+			"fieldId": "LeadTime"
+		}]
+	}],
+	"itemColumns": [{
+		"type": "java.lang.String",
+		"isEditable": false,
+		"isPinned": true,
+		"label": "Name",
+		"fieldId": "name"
+	}, {
+		"type": "java.lang.String",
+		"isEditable": false,
+		"isPinned": true,
+		"label": "Part No.",
+		"fieldId": "supplierPartId"
+	}, {
+		"type": "ariba.sourcing.basic.UCMoney",
+		"isEditable": true,
+		"isPinned": true,
+		"label": "Price",
+		"fieldId": "PRICE"
+	}, {
+		"type": "ariba.sourcing.basic.UOMQuantity",
+		"isEditable": true,
+		"isPinned": true,
+		"label": "Quantity",
+		"fieldId": "QUANTITY"
+	}, {
+		"type": "ariba.sourcing.basic.UCMoney",
+		"isEditable": false,
+		"isPinned": true,
+		"label": "Extended Price",
+		"fieldId": "EXTENDEDPRICE"
+	}, {
+		"type": "java.lang.Integer",
+		"isEditable": false,
+		"isPinned": true,
+		"label": "Lead Time (STD)",
+		"fieldId": "LeadTime"
+	}, {
+		"type": "java.math.BigDecimal",
+		"isEditable": true,
+		"validValues": {
+			"singletonValueType": 4,
+			"precision": 2
+		},
+		"isPinned": false,
+		"label": "Jan - Mar",
+		"fieldId": "01_2016"
+	}, {
+		"type": "java.math.BigDecimal",
+		"isEditable": true,
+		"validValues": {
+			"singletonValueType": 4,
+			"precision": 2
+		},
+		"isPinned": false,
+		"label": "Apr - Jun",
+		"fieldId": "04_2016"
+	}, {
+		"type": "java.math.BigDecimal",
+		"isEditable": true,
+		"validValues": {
+			"singletonValueType": 4,
+			"precision": 2
+		},
+		"isPinned": false,
+		"label": "Jul - Aug",
+		"fieldId": "07_2016"
+	}]
+}
